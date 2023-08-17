@@ -2,3 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes imageAnimation1 {
+    0%, 100% {
+      transform: translate(0%, 0%);
+    }
+    25% {
+      transform: translate(5%, 5%);
+    }
+    50% {
+      transform: translate(-5%, -5%);
+    }
+    75% {
+      transform: translateY(5%);
+    }
+  }
+  
+  .image-animation-1 {
+    animation: imageAnimation1 30s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  @keyframes imageAnimation2 {
+    0% {
+      transform: translate(0%, 0%);
+    }
+    50% {
+      transform: translate(-3%, 3%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+  
+  .image-animation-2 {
+    animation: imageAnimation2 28s infinite ease-in-out;
+  }
+  
+  @keyframes imageAnimation3 {
+    0%, 100% {
+      transform: translate(0%, 0%);
+    }
+    25% {
+      transform: translate(3%, -3%);
+    }
+    50% {
+      transform: translate(-3%, 3%);
+    }
+    75% {
+      transform: translate(3%, -3%);
+    }
+  }
+  
+  .image-animation-3 {
+    animation: imageAnimation3 25s infinite linear;
+  }
+  
+  @keyframes imageAnimation4 {
+    0%, 100% {
+      transform: translate(0%, 0%);
+    }
+    25% {
+      transform: translate(-2%, -2%);
+    }
+    50% {
+      transform: translate(2%, 2%);
+    }
+    75% {
+      transform: translate(0%, -4%);
+    }
+  }
+  
+  .image-animation-4 {
+    animation: imageAnimation4 20s infinite ease-in-out;
+  }
+  
+  
+  
+  
