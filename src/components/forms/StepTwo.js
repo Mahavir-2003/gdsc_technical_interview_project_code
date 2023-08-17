@@ -5,16 +5,19 @@ import validator from "validator";
 const StepTwo = ({ nextStep, prevStep, handleFormData, values }) => {
   const [error, setError] = useState(false);
 
+
   const submitFormData = (e) => {
     e.preventDefault();
-
+    console.log(e)
     if (
-      validator.isEmpty(values.phoneNumber) ||
-      validator.isEmpty(values.userName) ||
-      validator.isEmpty(values.password)
+      (values.phoneNumber.length < 10) ||
+      validator.isEmpty(values.username) ||
+      validator.isEmpty(values.password) ||
+      values.password.length < 8
     ) {
       setError(true);
     } else {
+      handleFormData(e.target.phoneNumber)
       nextStep();
     }
   };
@@ -25,10 +28,13 @@ const StepTwo = ({ nextStep, prevStep, handleFormData, values }) => {
         onSubmit={submitFormData}
         className="flex flex-col gap-y-4 justify-center items-center"
       >
-        <h1 className="w-1/2 text-start text-3xl font-bold">Step Two</h1>
+        <h1 className="w-1/2 text-start text-3xl font-bold">Hello {values.name} ...</h1>
         <TextField
           className="w-1/2"
-          error={error && validator.isEmpty(values.phoneNumber)}
+          error={error && values.phoneNumber.length < 10}
+          name="phoneNumber"
+          id="phoneNumber"
+          on
           helperText={
             error && validator.isEmpty(values.phoneNumber)
               ? "This is a required field"
@@ -42,21 +48,24 @@ const StepTwo = ({ nextStep, prevStep, handleFormData, values }) => {
         />
         <TextField
           className="w-1/2"
-          error={error && validator.isEmpty(values.userName)}
+          name="username"
+          error={error && validator.isEmpty(values.username)}
           helperText={
-            error && validator.isEmpty(values.userName) ? "This is a required field" : ""
+            error && validator.isEmpty(values.username) ? "This is a required field" : ""
           }
           label="User Name"
-          defaultValue={values.userName}
+          defaultValue={values.username}
           type="text"
           variant="outlined"
-          onChange={handleFormData("userName")}
+          onChange={handleFormData("username")}
         />
         <TextField
           className="w-1/2"
-          error={error && validator.isEmpty(values.password)}
+          name="password"
+          id="password"
+          error={error && (values.password.length < 8)}
           helperText={
-            error && validator.isEmpty(values.password) ? "This is a required field" : ""
+            error && (values.password.length < 8) ? "This is a required field or 8 character needed" : ""
           }
           label="Password"
           defaultValue={values.password}
@@ -65,10 +74,10 @@ const StepTwo = ({ nextStep, prevStep, handleFormData, values }) => {
           onChange={handleFormData("password")}
         />
         <div className="w-1/2 flex justify-between">
-          <Button variant="outlined" onClick={prevStep}>
+          <Button variant="outlined" color="secondary" className="w-1/3" type="button" onClick={prevStep}>
             Previous
           </Button>
-          <Button variant="outlined" type="submit">
+          <Button variant="outlined" className="w-1/3" type="submit">
             Next
           </Button>
         </div>

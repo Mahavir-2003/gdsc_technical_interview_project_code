@@ -43,7 +43,8 @@ const StepThree = ({ nextStep, prevStep, handleFileInput, values }) => {
   return (
     <div>
       <form onSubmit={submitFormData} className="flex flex-col gap-y-4 justify-center items-center">
-        <h1 className="w-1/2 text-start text-3xl font-bold">Upload Profile Picture and Resume</h1>
+        <h1 className="w-1/2 text-start text-3xl font-bold mb-10">Let's see how Beautiful You're :)</h1>
+        <p className="text-lg font-medium w-1/2">Upload Your Profile Picture</p>
         <input
           className="w-1/2"
           type="file"
@@ -51,12 +52,14 @@ const StepThree = ({ nextStep, prevStep, handleFileInput, values }) => {
           onChange={handleProfilePictureChange}
         />
         {profilePictureError && <p className="text-red-500">{profilePictureError}</p>}
+        <p className="text-lg font-medium w-1/2">Upload Your Resume</p>
         <input
           className="w-1/2"
           type="file"
           accept=".pdf"
           onChange={handleResumeChange}
         />
+        
         {resumeError && <p className="text-red-500">{resumeError}</p>}
         <div className="w-1/2 flex justify-between">
         <Button variant="outlined" onClick={prevStep}>Previous</Button>

@@ -2,79 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
+input::-webkit-file-upload-button{
+  padding : 10px;
+  width : 100%;
+  background-color : #59b0e6;
+  border: none;
+  border-radius: 5px;
+  color : white;
+}
+
 @keyframes imageAnimation1 {
-    0%, 100% {
-      transform: translate(0%, 0%);
-    }
-    25% {
-      transform: translate(5%, 5%);
-    }
-    50% {
-      transform: translate(-5%, -5%);
-    }
-    75% {
-      transform: translateY(5%);
-    }
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(-10deg);
   }
-  
-  .image-animation-1 {
-    animation: imageAnimation1 30s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  25% {
+    transform: translate(5%, 5%) rotate(10deg);
   }
-  
-  @keyframes imageAnimation2 {
-    0% {
-      transform: translate(0%, 0%);
-    }
-    50% {
-      transform: translate(-3%, 3%);
-    }
-    100% {
-      transform: translate(0%, 0%);
-    }
+  50% {
+    transform: translate(-5%, -5%) rotate(-10deg);
   }
-  
-  .image-animation-2 {
-    animation: imageAnimation2 28s infinite ease-in-out;
+  75% {
+    transform: translateY(5%) rotate(10deg);
   }
-  
-  @keyframes imageAnimation3 {
-    0%, 100% {
-      transform: translate(0%, 0%);
-    }
-    25% {
-      transform: translate(3%, -3%);
-    }
-    50% {
-      transform: translate(-3%, 3%);
-    }
-    75% {
-      transform: translate(3%, -3%);
-    }
+}
+
+.image-animation-1 {
+  animation: imageAnimation1 30s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes imageAnimation2 {
+  0% {
+    transform: translate(0%, 0%) rotate(10deg);
   }
-  
-  .image-animation-3 {
-    animation: imageAnimation3 25s infinite linear;
+  50% {
+    transform: translate(-3%, 3%) rotate(-10deg);
   }
-  
-  @keyframes imageAnimation4 {
-    0%, 100% {
-      transform: translate(0%, 0%);
-    }
-    25% {
-      transform: translate(-2%, -2%);
-    }
-    50% {
-      transform: translate(2%, 2%);
-    }
-    75% {
-      transform: translate(0%, -4%);
-    }
+  100% {
+    transform: translate(0%, 0%) rotate(10deg);
   }
-  
-  .image-animation-4 {
-    animation: imageAnimation4 20s infinite ease-in-out;
+}
+
+.image-animation-2 {
+  animation: imageAnimation2 28s infinite ease-in-out;
+}
+
+@keyframes imageAnimation3 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(-3deg);
   }
+  25% {
+    transform: translate(3%, -3%) rotate(6deg);
+  }
+  50% {
+    transform: translate(-3%, 3%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(3%, -3%) rotate(7deg);
+  }
+}
+
+.image-animation-3 {
+  animation: imageAnimation3 25s infinite linear;
+}
+
+@keyframes imageAnimation4 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(4deg);
+  }
+  25% {
+    transform: translate(-2%, -2%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(2%, 2%) rotate(3deg);
+  }
+  75% {
+    transform: translate(0%, -4%) rotate(-10deg);
+  }
+}
+
+.image-animation-4 {
+  animation: imageAnimation4 20s infinite ease-in-out;
+}
+
+@keyframes imageAnimation5 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(-5deg);
+  }
+  25% {
+    transform: translate(9%, 9%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-9%, -9%) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(9%) rotate(5deg);
+  }
+}
+
+.image-animation-5 {
+  animation: imageAnimation5 30s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes imageAnimation6 {
+  0% {
+    transform: translate(0%, 0%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5%, 5%) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(5deg);
+  }
+}
+
+.image-animation-6 {
+  animation: imageAnimation6 28s infinite ease-in-out;
+}
+
+@keyframes imageAnimation7 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(-5deg);
+  }
+  25% {
+    transform: translate(5%, -5%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5%, 5%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(5%, -5%) rotate(5deg);
+  }
+}
+
+.image-animation-7 {
+  animation: imageAnimation7 25s infinite linear;
+}
+
+@keyframes imageAnimation8 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(5deg);
+  }
+  25% {
+    transform: translate(-3%, -3%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(3%, 3%) rotate(5deg);
+  }
+  75% {
+    transform: translate(0%, -6%) rotate(-5deg);
+  }
+}
+
+.image-animation-8 {
+  animation: imageAnimation8 20s infinite ease-in-out;
+}
+
+/* Add more animations here... */
+
+
   
-  
-  
+
+
+
   

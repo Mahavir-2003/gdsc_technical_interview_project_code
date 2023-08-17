@@ -8,7 +8,7 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
   const submitFormData = (e) => {
     e.preventDefault();
 
-    if (validator.isEmpty(values.name) || !validator.isEmail(values.email)) {
+    if (!validator.isEmail(values.email)) {
       setError(true);
     } else {
       nextStep();
@@ -22,20 +22,8 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
         className="flex flex-col gap-y-4 justify-center items-center"
       >
         <h1 className="w-1/2 text-start text-3xl font-bold">
-          Create New Account
+          Log In to Your Account
         </h1>
-        <TextField
-          className="w-1/2"
-          error={error && validator.isEmpty(values.name)}
-          helperText={
-            error && validator.isEmpty(values.name) ? "This is a required field" : ""
-          }
-          label="Name"
-          defaultValue={values.name}
-          type="text"
-          variant="outlined"
-          onChange={handleFormData("name")}
-        />
         <TextField
           className="w-1/2"
           error={error && !validator.isEmail(values.email)}
@@ -48,14 +36,14 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
           variant="outlined"
           onChange={handleFormData("email")}
         />
-        <Button className="w-1/2" variant="contained"   type="submit">
+        <Button className="w-1/2" variant="contained" type="submit">
           Next
         </Button>
         <h1 className=" text-xl">or</h1>
-        <Button href="/login" className="w-1/2" variant="outlined" color="success" type="submit">
-          Sign In
+        <Button href="/" className="w-1/2" variant="outlined" color="success">
+          Sign Up
         </Button>
-      </form>
+      </form> 
     </div>
   );
 };
