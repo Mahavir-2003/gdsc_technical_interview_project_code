@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gdsc_technical_interview_project_code/static/css/main.13be655a.css",
+    "main.js": "/gdsc_technical_interview_project_code/static/js/main.5e5af218.js",
+    "static/js/787.30bb2d22.chunk.js": "/gdsc_technical_interview_project_code/static/js/787.30bb2d22.chunk.js",
+    "index.html": "/gdsc_technical_interview_project_code/index.html",
+    "main.13be655a.css.map": "/gdsc_technical_interview_project_code/static/css/main.13be655a.css.map",
+    "main.5e5af218.js.map": "/gdsc_technical_interview_project_code/static/js/main.5e5af218.js.map",
+    "787.30bb2d22.chunk.js.map": "/gdsc_technical_interview_project_code/static/js/787.30bb2d22.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13be655a.css",
+    "static/js/main.5e5af218.js"
+  ]
+}
